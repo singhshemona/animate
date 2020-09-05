@@ -1,0 +1,44 @@
+.spinner {
+    transform: rotate(-90deg);
+    width: 80px;
+    height: 80px;
+}
+  
+.circle {
+    stroke-linecap: round;
+    stroke-dasharray: 360;
+    stroke-width: 8;
+    stroke: #000;
+    fill: transparent;
+    animation: spin .3s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        stroke-dashoffset: 360;
+    }
+    to {
+        stroke-dashoffset: 40;
+    }
+}
+
+.success {
+    color: blue;
+}
+
+.failure {
+    color: red;
+}
+
+.slow {
+    font-size: 14px;
+}
+
+.medium {
+    font-size: 30px;
+}
+
+.fast {
+    font-size: 50px;
+}
+    
