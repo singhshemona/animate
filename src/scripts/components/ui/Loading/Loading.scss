@@ -1,44 +1,39 @@
-.spinner {
-    transform: rotate(-90deg);
-    width: 80px;
-    height: 80px;
-}
-  
-.circle {
-    stroke-linecap: round;
-    stroke-dasharray: 360;
-    stroke-width: 8;
-    stroke: #000;
-    fill: transparent;
-    animation: spin .3s linear infinite;
-}
+@import 'styles/index.scss';
+@import 'styles/variables.scss';
 
-@keyframes spin {
-    from {
-        stroke-dashoffset: 360;
-    }
-    to {
-        stroke-dashoffset: 40;
-    }
+.success,
+.failure {
+  font-size: 20px;
 }
 
 .success {
-    color: blue;
+  color: $success;
 }
 
 .failure {
-    color: red;
+   color: $failure;
 }
 
-.slow {
-    font-size: 14px;
+.spinner {
+  transform: rotate(-90deg);
+  width: 60px;
+  height: 60px;
+
+  .circle {
+    stroke-linecap: round;
+    stroke-dasharray: 360;
+    stroke-width: 6;
+    stroke: $primary;
+    fill: transparent;
+    animation: spin .7s ease-in-out 0s normal infinite;
+  }
 }
 
-.medium {
-    font-size: 30px;
+@keyframes spin {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 40;
+  }
 }
-
-.fast {
-    font-size: 50px;
-}
-    

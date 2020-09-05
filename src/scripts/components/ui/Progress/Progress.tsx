@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import './Loading.scss';
+import './Progress.scss';
 
 type Props = {
   outcome: string;
   endingMsg: string;
 };
 
-export const Loading = ({ outcome, endingMsg }: Props) => {
+export const Progress = ({ outcome, endingMsg }: Props) => {
   const [loading, hasLoaded] = useState(false);
 
   useEffect(() => {
@@ -18,22 +18,23 @@ export const Loading = ({ outcome, endingMsg }: Props) => {
           console.log(json);
           hasLoaded(true);
         });
-      // put to see spinner for at least a second
+      // put to see loading bar for at least a second
       // can update this or remove line #13, #23, and #25 entirely
-    }, 1100);
+    }, 1050);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <>
+    <div className={outcome}>
       {loading ? (
-        <p className={outcome}>{endingMsg}</p>
+        <p className="ending-msg">{endingMsg}</p>
       ) : (
-        <svg className="spinner" role="alert" aria-live="assertive">
-          <circle cx="30" cy="30" r="20" className="circle" />
+        <svg role="alert" aria-live="assertive">
+          <rect className="border" />
+          <rect className="filling" />
         </svg>
       )}
-    </>
+    </div>
   );
 };
