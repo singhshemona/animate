@@ -1,12 +1,36 @@
 import React, { useState } from 'react';
 import './Accordion.scss';
 
-type Props = {
-  status: boolean;
-};
+export const Accordion = () => {
+  const [whichAccordion, isWhichAccordion] = useState('first');
 
-export const Accordion = ({ status }: Props) => {
-  const [open, isOpen] = useState(false);
+  const toggleAccordion = (event: any) => {
+    const accordionSelected = event.target.className;
+    isWhichAccordion(accordionSelected);
+  };
 
-  return <button className={status ? 'open' : 'close'}></button>;
+  return (
+    <div>
+      <div className="accordion">
+        <button onClick={toggleAccordion} className="first">
+          First Title
+        </button>
+        {whichAccordion === 'first' && (
+          <div className="show-hide">
+            <p>This is the content</p>
+          </div>
+        )}
+      </div>
+      <div className="accordion">
+        <button onClick={toggleAccordion} className="second">
+          Second Title
+        </button>
+        {whichAccordion === 'second' && (
+          <div className="show-hide">
+            <p>This is more content</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 };

@@ -1,0 +1,21 @@
+@import 'styles/variables.scss';
+
+.card {
+  background: $primaryLight;
+  color: $primary;
+  padding: 30px;
+  margin: 0 auto;
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.notLifted {
+  height: 300px;
+  overflow: hidden;
+}
+
+.lifted {
+  margin-left: -70px;
+  transition: ease .5s;
+}
