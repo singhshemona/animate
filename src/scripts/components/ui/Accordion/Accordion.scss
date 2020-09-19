@@ -1,0 +1,33 @@
+@import 'styles/variables.scss';
+
+.accordion {
+  max-width: 500px;
+
+  button {
+    min-width: 100%;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .content {
+    background: $success;
+
+    p {
+      margin: 0;
+      padding: 20px;
+    }
+  }
+
+  .hide {
+    height: 0; 
+    transition: ease .3s;
+  }
+  
+  .first-show,
+  .second-show,
+  .third-show {
+    height: 100px;
+    transition: ease-in-out .3s;
+  }
+}
+

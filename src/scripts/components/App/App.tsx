@@ -7,15 +7,7 @@ import './App.scss';
 import { Accordion } from '../ui/Accordion/Accordion';
 
 function App() {
-  return (
-    <div>
-      {/* <Loading endingMsg='Data Loaded!' outcome='success' /> */}
-      {/* <Progress endingMsg='Data Loaded!' outcome='success' /> */}
-      {/* <CardEnlarge/> */}
-      {/* <ItemSelection /> */}
-      <Accordion />
-    </div>
-  );
+  return <Accordion />;
 }
 
 export default App;
