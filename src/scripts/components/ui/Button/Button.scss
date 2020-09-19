@@ -6,6 +6,7 @@ body {
   width: 250px;
   height: 250px;
   border-radius: 50px;
+  background: #55b9f3;
   border: 0;
 
   &:focus {
@@ -20,12 +21,10 @@ body {
 
 @keyframes unpressed {
   from {
-    background: transparent;
     box-shadow: transparent;
   }
 
   to {
-    background: #55b9f3;
     box-shadow:  20px 20px 60px #489dcf, 
              -20px -20px 60px #62d5ff;
   }
@@ -37,12 +36,10 @@ body {
 
 @keyframes pressed {
   from {
-    background: transparent;
     box-shadow: transparent;
   }
 
   to {
-    background: #55b9f3;
     box-shadow: inset 20px 20px 60px #489dcf, 
               inset -20px -20px 60px #62d5ff;
   }
