@@ -10,7 +10,7 @@ export const Button = () => {
 
   return (
     <button onClick={toggleButton} className={'button ' + (click ? 'pressed' : 'unpressed')}>
-      {click ? 'Color Changed!' : 'Change Color'}
+      {click ? 'Action is Done!' : 'Do some action'}
     </button>
   );
 };

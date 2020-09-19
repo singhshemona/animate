@@ -1,22 +1,30 @@
+@import 'styles/variables.scss';
+
 body {
   background: #55b9f3;
 }
 
 .button {
-  width: 250px;
-  height: 250px;
-  border-radius: 50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   background: #55b9f3;
   border: 0;
+  color: white;
+  font-size: 16px;
 
   &:focus {
-    // CHANGE THIS TO BE MORE ACCESSIBLE
     outline: 0;
+    font-weight: bold;
   }
 }
 
 .unpressed {
-  animation: unpressed .1s ease-in forwards;
+  animation: unpressed .1s ease forwards;
+}
+
+.pressed {
+  animation: pressed .1s ease forwards;
 }
 
 @keyframes unpressed {
@@ -25,13 +33,10 @@ body {
   }
 
   to {
-    box-shadow:  20px 20px 60px #489dcf, 
-             -20px -20px 60px #62d5ff;
+    box-shadow:  
+      5px 5px 12px #489dcf, 
+      -5px -5px 12px #62d5ff;;
   }
-}
-
-.pressed {
-  animation: pressed .1s ease-in forwards;
 }
 
 @keyframes pressed {
@@ -40,7 +45,8 @@ body {
   }
 
   to {
-    box-shadow: inset 20px 20px 60px #489dcf, 
-              inset -20px -20px 60px #62d5ff;
+    box-shadow: 
+      inset 5px 5px 12px #489dcf, 
+      inset -5px -5px 12px #62d5ff;
   }
 }
