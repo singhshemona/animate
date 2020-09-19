@@ -21,14 +21,14 @@
 
   .hide {
     height: 0; 
-    transition: ease-in-out .3s;
+    transition: ease-in .3s;
   }
   
   .first-show,
   .second-show,
   .third-show {
     height: 100px;
-    transition: ease-in-out .3s;
+    transition: ease-out .3s;
   }
 }
 
