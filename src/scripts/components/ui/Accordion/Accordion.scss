@@ -2,6 +2,7 @@
 
 .accordion {
   max-width: 500px;
+  overflow: hidden;
 
   button {
     min-width: 100%;
@@ -20,7 +21,7 @@
 
   .hide {
     height: 0; 
-    transition: ease .3s;
+    transition: ease-in-out .3s;
   }
   
   .first-show,
