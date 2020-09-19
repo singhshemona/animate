@@ -5,6 +5,7 @@ body {
 .button {
   width: 250px;
   height: 250px;
+  border-radius: 50px;
   border: 0;
 
   &:focus {
@@ -14,16 +15,35 @@ body {
 }
 
 .unpressed {
-  border-radius: 50px;
-  background: #55b9f3;
-  box-shadow:  20px 20px 60px #489dcf, 
+  animation: unpressed .1s ease-in forwards;
+}
+
+@keyframes unpressed {
+  from {
+    background: transparent;
+    box-shadow: transparent;
+  }
+
+  to {
+    background: #55b9f3;
+    box-shadow:  20px 20px 60px #489dcf, 
              -20px -20px 60px #62d5ff;
+  }
 }
 
 .pressed {
-  border-radius: 50px;
-  background: #55b9f3;
-  box-shadow: inset 20px 20px 60px #489dcf, 
-            inset -20px -20px 60px #62d5ff;
-  transition: ease-in-out .5s;
+  animation: pressed .1s ease-in forwards;
+}
+
+@keyframes pressed {
+  from {
+    background: transparent;
+    box-shadow: transparent;
+  }
+
+  to {
+    background: #55b9f3;
+    box-shadow: inset 20px 20px 60px #489dcf, 
+              inset -20px -20px 60px #62d5ff;
+  }
 }
