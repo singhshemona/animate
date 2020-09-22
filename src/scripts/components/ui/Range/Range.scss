@@ -1,0 +1,30 @@
+@import 'styles/variables.scss';
+
+.range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 200px; 
+  height: 10px;
+  background: $primaryLight;
+  border-radius: 8px;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background: $success;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 0;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      background: $failure;
+    }
+  }
+}

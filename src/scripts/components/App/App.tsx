@@ -5,8 +5,9 @@ import './App.scss';
 // import { CardEnlarge } from '../ui/CardEnlarge/CardEnlarge';
 // import { ItemSelection } from '../ui/ItemSelection/ItemSelection';
 // import { Accordion } from '../ui/Accordion/Accordion';
-import { Button } from '../ui/Button/Button';
+// import { Button } from '../ui/Button/Button';
+import { Range } from '../ui/Range/Range';
 
 export default function App() {
-  return <Button />;
+  return <Range />;
 }

@@ -5,12 +5,12 @@
   color: $primary;
   padding: 30px;
   margin: 0 auto;
+  border-radius: 10px;
 }
 
 .no {
   width: 300px;
-  // height: 400px;
-  border-radius: 10px;
+  cursor: pointer;
 
   article {
     height: 270px;
