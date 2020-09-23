@@ -1,10 +1,11 @@
 @import 'styles/variables.scss';
 
 .range {
+  margin: 40px;
   -webkit-appearance: none;
   appearance: none;
-  width: 200px; 
-  height: 10px;
+  width: 400px; 
+  height: 25px;
   background: $primaryLight;
   border-radius: 8px;
 
@@ -12,10 +13,16 @@
     -webkit-appearance: none;
     appearance: none;
     border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    background: $success;
+    height: 65px;
+    width: 65px;
+    background: $failure;
     cursor: pointer;
+    border: 12px solid $primaryLight;
+
+    &:hover { 
+      margin-bottom: 40px;
+      transition: ease-in-out .3s;
+    }
   }
 
   &:focus {
@@ -24,7 +31,11 @@
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
-      background: $failure;
+      background: $failureDark;
     }
   }
+}
+
+.value {
+  font-size: 50px;
 }
