@@ -20,19 +20,15 @@
     border: 12px solid $primaryLight;
 
     &:hover { 
-      margin-bottom: 40px;
-      transition: ease-in-out .3s;
+      transform: scale(1.2);
+      transition: ease-out .3s;
     }
   }
 
   &:focus {
-    outline: 0;
-
-    &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      background: $failureDark;
-    }
+    outline-offset: 8px;
+    outline-style: dashed;
+    outline-color: $primaryLight;
   }
 }
 
