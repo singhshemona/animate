@@ -1,0 +1,14 @@
+.slides {
+  display: flex;
+  border: 1px solid black;
+  height: 270px;
+  overflow-x: scroll;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: greenyellow;
+  min-width: 300px;
+  margin: 30px;
+}

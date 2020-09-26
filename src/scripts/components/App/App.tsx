@@ -6,8 +6,9 @@ import './App.scss';
 // import { ItemSelection } from '../ui/ItemSelection/ItemSelection';
 // import { Accordion } from '../ui/Accordion/Accordion';
 // import { Button } from '../ui/Button/Button';
-import { Range } from '../ui/Range/Range';
+// import { Range } from '../ui/Range/Range';
+import { Pagination } from '../ui/Pagination/Pagination';
 
 export default function App() {
-  return <Range />;
+  return <Pagination />;
 }
