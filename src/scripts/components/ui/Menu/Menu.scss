@@ -1,0 +1,23 @@
+@import 'styles/variables.scss';
+
+.menu {
+  li {
+    display: inline;
+  }
+}
+
+.subitemList {
+  background: $success;
+  overflow: hidden;
+  animation: appear .3s ease-in forwards;
+}
+
+@keyframes appear {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100px;
+  }
+}
