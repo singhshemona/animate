@@ -8,10 +8,27 @@ export const Pagination = () => {
   const ref4 = useRef<HTMLDivElement>(null);
 
   const handleShow = (i: number) => {
-    const card = 'ref' + i;
-    console.log(card);
-    if (null !== ref3.current) {
-      ref3.current.scrollIntoView({ behavior: 'smooth' });
+    switch (i) {
+      case 1:
+        if (null !== ref1.current) {
+          ref1.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        break;
+      case 2:
+        if (null !== ref2.current) {
+          ref2.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        break;
+      case 3:
+        if (null !== ref3.current) {
+          ref3.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        break;
+      case 4:
+        if (null !== ref4.current) {
+          ref4.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        break;
     }
   };
 
@@ -54,9 +71,15 @@ export const Pagination = () => {
       </div>
       <div className="counter">
         <button onClick={() => handleShow(1)} type="button">
-          Card 2
+          Card 1
         </button>
         <button onClick={() => handleShow(2)} type="button">
+          Card 2
+        </button>
+        <button onClick={() => handleShow(3)} type="button">
+          Card 3
+        </button>
+        <button onClick={() => handleShow(4)} type="button">
           Card 4
         </button>
       </div>
