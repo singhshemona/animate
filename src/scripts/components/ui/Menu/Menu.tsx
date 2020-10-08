@@ -6,21 +6,20 @@ export const Menu = () => {
 
   return (
     <nav>
-      <img src="placeholder" alt="logo" />
-      <ul className="menu">
+      <ul className="menu-items">
         <li onMouseEnter={() => setFirst(true)} onMouseLeave={() => setFirst(false)}>
-          First Item
+          <span className={'heading ' + (first && 'selected')}>Home</span>
+          {first && (
+            <ul className={'sub-items ' + (first && 'on')}>
+              <li>Current Projects</li>
+              <li>Upcoming Visions</li>
+              <li>Quarter 4 Goals</li>
+            </ul>
+          )}
         </li>
-        {first && (
-          <ul className={'subitemList ' + (first ? 'on' : null)}>
-            <li>1a Subitem</li>
-            <li>1b Subitem</li>
-            <li>1c Subitem</li>
-          </ul>
-        )}
-        <li>Second Item</li>
-        <li>Third Item</li>
-        <li>Fourth Item</li>
+        <li>About Us</li>
+        <li>Contact</li>
+        <li>Job Openings</li>
       </ul>
     </nav>
   );

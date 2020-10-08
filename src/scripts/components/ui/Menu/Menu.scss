@@ -1,23 +1,54 @@
 @import 'styles/variables.scss';
 
-.menu {
+nav {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.menu-items,
+.sub-items {
+  background: $primaryLight;
+  border-radius: 8px;
+}
+
+.menu-items {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: $primary;
+
   li {
-    display: inline;
+    list-style-type: none;
+  }
+
+  .heading {
+    font-weight: bold;
+    font-size: 26px;
+  }
+
+  .selected {
+    text-decoration: underline;
   }
 }
 
-.subitemList {
-  background: $success;
+.sub-items {
   overflow: hidden;
-  animation: appear .3s ease-in forwards;
+  animation: appear .1s ease-in forwards;
+  position: absolute;
+  line-height: 34px;
+  padding: 30px 20px 20px 20px;
 }
 
 @keyframes appear {
-  from {
+  0% {
     width: 0;
   }
 
-  to {
+  90% {
     width: 100px;
+  }
+
+  100% {
+    width: auto;
   }
 }
