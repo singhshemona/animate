@@ -3,6 +3,7 @@ import './Menu.scss';
 
 export const Menu = () => {
   const [first, setFirst] = useState(false);
+  const [second, setSecond] = useState(false);
 
   return (
     <nav>
@@ -17,7 +18,16 @@ export const Menu = () => {
             </ul>
           )}
         </li>
-        <li>About Us</li>
+        <li onMouseEnter={() => setSecond(true)} onMouseLeave={() => setSecond(false)}>
+          <span className={'heading ' + (second && 'selected')}>About Us</span>
+          {second && (
+            <ul className={'sub-items ' + (second && 'on')}>
+              <li>Current Projects</li>
+              <li>Upcoming Visions</li>
+              <li>Quarter 4 Goals</li>
+            </ul>
+          )}
+        </li>
         <li>Contact</li>
         <li>Job Openings</li>
       </ul>
