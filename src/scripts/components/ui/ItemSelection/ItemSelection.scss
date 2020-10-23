@@ -1,21 +1,50 @@
 @import 'styles/variables.scss';
 
 .card {
-  background: $secondary;
-  color: $primary;
+  background: $primary;
+  color: $secondary;
   padding: 30px;
-  margin: 0 auto;
+  margin: 80px auto auto auto;
   width: 300px;
-  height: 400px;
-  border-radius: 6px;
+  height: 380px;
+  border-radius: 10px;
 }
 
-.notLifted {
-  height: 300px;
-  overflow: hidden;
+.notLifted,
+.lifted,
+.lifted img {
+  transition: .2s ease;
 }
 
 .lifted {
-  margin-left: -70px;
-  transition: ease .5s;
+  margin-top: -70px;
+
+  img {
+    transform: rotate(-10deg);
+  }
+}
+
+.toggleContent {
+  animation: show .5s ease forwards;
+
+  .select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .disclaimer {
+    font-size: 12px;
+    font-style: italic;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

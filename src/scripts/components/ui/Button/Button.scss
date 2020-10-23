@@ -1,14 +1,14 @@
 @import 'styles/variables.scss';
 
-body {
-  background: #55b9f3;
+body,
+.button {
+  background: $green;
 }
 
 .button {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: #55b9f3;
   border: 0;
   color: white;
   font-size: 16px;
@@ -34,8 +34,8 @@ body {
 
   to {
     box-shadow:  
-      5px 5px 12px #489dcf, 
-      -5px -5px 12px #62d5ff;;
+      5px 5px 12px #5D987B, 
+      -5px -5px 12px #B3D0C2;
   }
 }
 
@@ -46,7 +46,7 @@ body {
 
   to {
     box-shadow: 
-      inset 5px 5px 12px #489dcf, 
-      inset -5px -5px 12px #62d5ff;
+      inset 5px 5px 12px #5D987B, 
+      inset -5px -5px 12px #B3D0C2;
   }
 }

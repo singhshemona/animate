@@ -1,10 +1,13 @@
 @import 'styles/variables.scss';
 
+.card,
+.close {
+  color: $red;
+}
+
 .card {
   background: $secondary;
-  color: $primary;
   padding: 30px;
-  margin: 0 auto;
   border-radius: 6px;
 }
 
@@ -19,7 +22,7 @@
 }
 
 .yes {
-  animation: open .3s ease-in forwards;
+  animation: open .2s ease-in forwards;
 
   .close {
     font-size: 24px;
@@ -40,7 +43,7 @@
 @keyframes open {
   0% {
     width: 300px;
-    height: 400px;
+    height: 270px;
   }
 
   30% {
