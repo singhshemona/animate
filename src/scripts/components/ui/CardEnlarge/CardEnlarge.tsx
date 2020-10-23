@@ -18,12 +18,6 @@ export const CardEnlarge = () => {
             X
           </button>
         )}
-        {/* {
-          open &&
-          setTimeout(() => {
-            <button onClick={close}>X</button>
-          }, 1000)
-        } */}
       </div>
       <article>
         <p>
@@ -55,17 +49,5 @@ export const CardEnlarge = () => {
         </p>
       </aside>
     </main>
-
-    // Also works
-    // <div>
-    //   {
-    //     open &&
-    //     <button onClick={() => isOpened(false)}>X</button>
-    //   }
-    //   <div onClick={() => isOpened(true)} className={ open ? 'yes' : 'no' }>
-    //     <h2>Some Text</h2>
-    //     <p>Lorem Ipsum Hello</p>
-    //   </div>
-    // </div>
   );
 };

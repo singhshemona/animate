@@ -5,10 +5,19 @@
   color: $red;
 }
 
+.card,
+article {
+  overflow: hidden;
+}
+
 .card {
   background: $secondary;
   padding: 30px;
   border-radius: 6px;
+
+  a {
+    color: $primary;
+  }
 }
 
 .no {
@@ -17,12 +26,11 @@
 
   article {
     height: 270px;
-    overflow: hidden;
   }
 }
 
 .yes {
-  animation: open .2s ease-in forwards;
+  animation: open .4s ease-in forwards;
 
   .close {
     font-size: 24px;
@@ -48,7 +56,7 @@
 
   30% {
     width: auto;
-    height: 400px;
+    height: 270px;
   }
 
   100% {

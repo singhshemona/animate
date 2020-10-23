@@ -1,50 +1,50 @@
-@import 'styles/variables.scss';
+// @import 'styles/variables.scss';
 
-.card {
-  background: $primary;
-  color: $secondary;
-  padding: 30px;
-  margin: 80px auto auto auto;
-  width: 300px;
-  height: 380px;
-  border-radius: 10px;
-}
+// .card {
+//   background: $primary;
+//   color: $secondary;
+//   padding: 30px;
+//   margin: 80px auto auto auto;
+//   width: 300px;
+//   height: 380px;
+//   border-radius: 10px;
+// }
 
-.notLifted,
-.lifted,
-.lifted img {
-  transition: .2s ease;
-}
+// .notLifted,
+// .lifted,
+// .lifted img {
+//   transition: .2s ease;
+// }
 
-.lifted {
-  margin-top: -70px;
+// .lifted {
+//   margin-top: -70px;
 
-  img {
-    transform: rotate(-10deg);
-  }
-}
+//   img {
+//     transform: rotate(-10deg);
+//   }
+// }
 
-.toggleContent {
-  animation: show .5s ease forwards;
+// .toggleContent {
+//   animation: show .5s ease forwards;
 
-  .select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-  }
+//   .select {
+//     width: 100%;
+//     padding: 10px;
+//     font-size: 16px;
+//   }
 
-  .disclaimer {
-    font-size: 12px;
-    font-style: italic;
-  }
-}
+//   .disclaimer {
+//     font-size: 12px;
+//     font-style: italic;
+//   }
+// }
 
-@keyframes show {
-  from {
-    opacity: 0;
-  }
+// @keyframes show {
+//   from {
+//     opacity: 0;
+//   }
 
-  to {
-    opacity: 1;
-  }
-}
+//   to {
+//     opacity: 1;
+//   }
+// }
