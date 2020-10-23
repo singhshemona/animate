@@ -61,6 +61,7 @@ export const Pagination = () => {
     <div>
       <div className="slides">
         {cards.map((card, i) => (
+          // eslint-disable-next-line
           <div key={i++} className={'card ' + 'card' + i} ref={card.ref}>
             <h1>{card.title}</h1>
             <p>{card.subtext}</p>
@@ -70,6 +71,7 @@ export const Pagination = () => {
       <div className="options">
         {buttons.map((buttonNum, i) => (
           <button
+            // eslint-disable-next-line
             className={'option ' + 'option' + buttonNum}
             key={i++}
             onClick={() => handleShow(buttonNum)}

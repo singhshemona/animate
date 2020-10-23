@@ -6,8 +6,8 @@
   appearance: none;
   width: 400px; 
   height: 25px;
-  background: $primaryLight;
-  border-radius: 8px;
+  background: $secondary;
+  border-radius: 6px;
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -15,9 +15,9 @@
     border-radius: 50%;
     height: 65px;
     width: 65px;
-    background: $failure;
+    background: $red;
     cursor: pointer;
-    border: 12px solid $primaryLight;
+    border: 12px solid $secondary;
 
     &:hover { 
       transform: scale(1.2);
@@ -28,7 +28,7 @@
   &:focus {
     outline-offset: 8px;
     outline-style: dashed;
-    outline-color: $primaryLight;
+    outline-color: $secondary;
   }
 }
 

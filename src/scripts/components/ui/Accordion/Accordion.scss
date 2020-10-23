@@ -3,15 +3,30 @@
 .accordion {
   max-width: 500px;
   overflow: hidden;
+  border-radius: 6px;
 
   button {
     min-width: 100%;
     text-align: left;
-    padding: 10px;
+    padding: 14px;
+    border: 0;
+    font-size: 16px;
+    background: $red;
+    color: $secondary;
+    font-weight: bold;
+
+    &:focus {
+      outline-style: dotted;
+      outline-width: small;
+      outline-offset: 0px;
+      outline-color: $secondary;
+    }
+    
   }
 
   .content {
-    background: $success;
+    background: $secondary;
+    font-size: 14px;
 
     p {
       margin: 0;

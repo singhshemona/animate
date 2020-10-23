@@ -7,6 +7,9 @@ export const Accordion = () => {
   const toggleAccordion = (event: any) => {
     const accordionSelected = event.target.className;
     isWhichAccordion(accordionSelected);
+    if (whichAccordion === event.target.className) {
+      isWhichAccordion('');
+    }
   };
 
   return (
