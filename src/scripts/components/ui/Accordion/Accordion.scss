@@ -14,19 +14,25 @@
     background: $red;
     color: $secondary;
     font-weight: bold;
+    border-bottom: 1px solid $secondary;
 
     &:focus {
       outline-style: dotted;
-      outline-width: small;
-      outline-offset: 0px;
+      outline-width: thin;
+      outline-offset: -6px;
       outline-color: $secondary;
     }
-    
+  }
+
+  .selection:nth-last-child(1) button {
+    border-bottom: 0;
   }
 
   .content {
     background: $secondary;
     font-size: 14px;
+    color: $red;
+    overflow: auto;
 
     p {
       margin: 0;
@@ -42,7 +48,7 @@
   .first-show,
   .second-show,
   .third-show {
-    height: 100px;
+    height: 130px;
     transition: ease-out .3s;
   }
 }
