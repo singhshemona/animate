@@ -14,16 +14,16 @@ import { Shake } from '../ui/Shake/Shake';
 export default function App() {
   return (
     <>
-      <Accordion />
+      {/* <Accordion />
       <Button />
-      <CardEnlarge />
+      <CardEnlarge /> */}
       <ItemSelection />
-      <Loading endingMsg="Data Loaded!" outcome="success" />
+      {/* <Loading endingMsg="Data Loaded!" outcome="success" />
       <Menu />
       <Pagination />
       <Progress endingMsg="Data Loaded!" outcome="success" />
       <Range />
-      <Shake />
+      <Shake /> */}
     </>
   );
 }
