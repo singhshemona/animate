@@ -17,10 +17,10 @@ export default function App() {
       {/* <Accordion />
       <Button />
       <CardEnlarge />
-      <ItemSelection /> */}
-      <Loading endingMsg="Data Loaded!" outcome="success" />
-      {/* <Menu />
-      <Pagination />
+      <ItemSelection />
+      <Loading endingMsg="Data Loaded!" outcome="success" /> */}
+      <Menu />
+      {/* <Pagination />
       <Progress endingMsg="Data Loaded!" outcome="success" />
       <Range />
       <Shake /> */}

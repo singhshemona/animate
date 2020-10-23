@@ -1,10 +1,5 @@
 @import 'styles/variables.scss';
 
-nav {
-  max-width: 540px;
-  margin: 0 auto;
-}
-
 .menu-items,
 .sub-items {
   background: $secondary;
@@ -14,7 +9,7 @@ nav {
 .menu-items {
   padding: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   color: $primary;
 
   li {
@@ -22,11 +17,11 @@ nav {
   }
 
   .heading {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   .selected {
-    font-weight: bold;
+    text-decoration: underline;
   }
 }
 
