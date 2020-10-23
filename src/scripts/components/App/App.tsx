@@ -15,11 +15,11 @@ export default function App() {
   return (
     <>
       {/* <Accordion />
-      <Button /> */}
+      <Button />
       <CardEnlarge />
-      {/* <ItemSelection />
+      <ItemSelection /> */}
       <Loading endingMsg="Data Loaded!" outcome="success" />
-      <Menu />
+      {/* <Menu />
       <Pagination />
       <Progress endingMsg="Data Loaded!" outcome="success" />
       <Range />
