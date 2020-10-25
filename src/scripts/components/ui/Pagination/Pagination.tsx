@@ -36,22 +36,26 @@ export const Pagination = () => {
     {
       ref: ref1,
       title: 'Title',
-      subtext: 'some subtext',
+      subtext:
+        "Where there's water on Earth, you find life as we know it. So if you find water somewhere else, it becomes a remarkable draw to look closer to see if life of any kind is there, even if it's bacterial, which would be extraordinary for the field of biology.",
     },
     {
       ref: ref2,
       title: 'Second Title',
-      subtext: 'another subtext',
+      subtext:
+        "Typically, when you look for role models, you want someone who has your interests and came from the same background. Well, look how restricting that is. What people should do is take role models a la carte. If there's someone whose character you appreciated, you respect that trait.",
     },
     {
       ref: ref3,
       title: 'Third Title',
-      subtext: 'yet another subtext',
+      subtext:
+        "In the animal kingdom, one of the keys to survival is to outwit your enemies. And when you're surrounded by carnivores, one of the best strategies is to fade into the background and disappear.",
     },
     {
       ref: ref4,
       title: 'Fourth Title',
-      subtext: 'woohoo yet another subtext',
+      subtext:
+        "Half of my library are old books because I like seeing how people thought about their world at their time. So that I don't get bigheaded about something we just discovered and I can be humble about where we might go next. Because you can see who got stuff right and most of the people who got stuff wrong.",
     },
   ];
 

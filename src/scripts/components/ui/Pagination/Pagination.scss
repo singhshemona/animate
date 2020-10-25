@@ -1,35 +1,53 @@
+@import 'styles/variables.scss';
+
+.card,
+.option {
+  border-radius: 8px;
+}
+
 .slides {
   display: flex;
-  height: 270px;
   overflow-x: scroll;
   margin: 0 70px;
 }
 
-option {
-  font-size: 20px;
+.options {
+  display: flex;
+  justify-content: space-around;
+
+  button {
+    font-size: 18px;
+    border: 0;
+    padding: 8px 16px;
+  }
 }
 
 .card {
   min-width: 350px;
   margin: 30px;
+  padding: 0 20px;
 }
 
 .option1,
 .card1 {
-  background: red;
+  background: $red;
+  color: $secondary;
 }
 
 .option2,
 .card2 {
-  background: green;
+  background: $secondary;
+  color: $primary;
 }
 
 .option3,
 .card3 {
-  background: blue;
+  background: $green;
+  color: $secondary;
 }
 
 .option4,
 .card4 {
-  background: pink;
+  background: $primary;
+  color: $secondary;
 }

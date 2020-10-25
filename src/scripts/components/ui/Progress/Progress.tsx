@@ -31,8 +31,8 @@ export const Progress = ({ outcome, endingMsg }: Props) => {
         <p className="ending-msg">{endingMsg}</p>
       ) : (
         <svg role="alert" aria-live="assertive">
-          <rect className="border" />
-          <rect className="filling" />
+          <rect className="border" rx="20" ry="20" />
+          <rect className="filling" rx="20" ry="20" />
         </svg>
       )}
     </div>

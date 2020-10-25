@@ -2,6 +2,9 @@
 
 .range {
   margin: 40px;
+}
+
+.range-input {
   -webkit-appearance: none;
   appearance: none;
   width: 400px; 
@@ -15,13 +18,13 @@
     border-radius: 50%;
     height: 65px;
     width: 65px;
-    background: $red;
+    background: $primary;
     cursor: pointer;
     border: 12px solid $secondary;
 
     &:hover { 
       transform: scale(1.2);
-      transition: ease-out .3s;
+      transition: ease-out .2s;
     }
   }
 
@@ -34,4 +37,5 @@
 
 .value {
   font-size: 50px;
+  color: $primary;
 }

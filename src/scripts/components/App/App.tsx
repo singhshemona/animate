@@ -18,12 +18,12 @@ export default function App() {
       <Button />
       <CardEnlarge />
       <ItemSelection />
-      <Loading endingMsg="Data Loaded!" outcome="success" /> */}
-      <Menu />
-      {/* <Pagination />
-      <Progress endingMsg="Data Loaded!" outcome="success" />
-      <Range />
-      <Shake /> */}
+      <Loading endingMsg="Data Loaded!" outcome="success" />
+      <Menu /> */}
+      {/* <Pagination /> still needs to get done*/}
+      {/* <Progress endingMsg="Data Loaded!" outcome="success" /> */}
+      {/* <Range /> */}
+      <Shake />
     </>
   );
 }
