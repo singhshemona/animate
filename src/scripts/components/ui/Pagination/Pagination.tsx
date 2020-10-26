@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './Pagination.scss';
 
 export const Pagination = () => {
@@ -6,8 +6,10 @@ export const Pagination = () => {
   const ref2 = useRef<HTMLDivElement>(null);
   const ref3 = useRef<HTMLDivElement>(null);
   const ref4 = useRef<HTMLDivElement>(null);
+  const [activeButton, setActiveButton] = useState(0);
 
   const handleShow = (i: number) => {
+    setActiveButton(i);
     switch (i) {
       case 1:
         if (null !== ref1.current) {
@@ -76,7 +78,7 @@ export const Pagination = () => {
         {buttons.map((buttonNum, i) => (
           <button
             // eslint-disable-next-line
-            className={'option ' + 'option' + buttonNum}
+            className={'option ' + 'option' + buttonNum + " " + (activeButton === buttonNum && 'active')}
             key={i++}
             onClick={() => handleShow(buttonNum)}
             type="button"

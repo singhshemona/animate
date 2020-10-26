@@ -17,8 +17,11 @@
 
   button {
     font-size: 18px;
-    border: 0;
     padding: 8px 16px;
+    border-width: 4px;
+    border-style: solid;
+    color: $primary;
+    font-weight: bold;
   }
 }
 
@@ -28,26 +31,58 @@
   padding: 0 20px;
 }
 
-.option1,
 .card1 {
   background: $red;
   color: $secondary;
 }
 
-.option2,
+.option1 {
+  border-color: $red;
+
+  &.active {
+    background: $red;
+    color: $secondary;
+  }
+}
+
 .card2 {
   background: $secondary;
   color: $primary;
 }
 
-.option3,
+.option2 {
+  border-color: $secondary;
+
+  &.active {
+    background: $secondary;
+    color: $primary;
+  }
+}
+
 .card3 {
   background: $green;
   color: $secondary;
 }
 
-.option4,
+.option3 {
+  border-color: $green;
+
+  &.active {
+    background: $green;
+    color: $secondary;
+  }
+}
+
 .card4 {
   background: $primary;
   color: $secondary;
+}
+
+.option4 {
+  border-color: $primary;
+
+  &.active {
+    background: $primary;
+    color: $secondary;
+  }
 }
