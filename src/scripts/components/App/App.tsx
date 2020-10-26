@@ -14,15 +14,17 @@ import { Shake } from '../ui/Shake/Shake';
 export default function App() {
   return (
     <>
+      {/* Pagination and shake still need to get done */}
+
       {/* <Accordion />
       <Button />
       <CardEnlarge />
       <ItemSelection />
       <Loading endingMsg="Data Loaded!" outcome="success" />
       <Menu /> */}
-      {/* <Pagination /> still needs to get done*/}
-      {/* <Progress endingMsg="Data Loaded!" outcome="success" /> */}
-      {/* <Range /> */}
+      {/* <Pagination />  */}
+      {/* <Progress endingMsg="Data Loaded!" outcome="success" />
+      <Range /> */}
       <Shake />
     </>
   );
