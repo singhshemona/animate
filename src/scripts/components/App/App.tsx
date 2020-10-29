@@ -14,8 +14,8 @@ import { Shake } from '../ui/Shake/Shake';
 export default function App() {
   return (
     <>
-      {/* <Accordion />
-      <Button />
+      <Accordion />
+      {/* <Button />
       <CardEnlarge />
       <ItemSelection />
       <Loading endingMsg="Data Loaded!" outcome="success" />

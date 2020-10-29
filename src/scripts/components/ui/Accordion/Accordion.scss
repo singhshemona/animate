@@ -1,7 +1,6 @@
 @import 'styles/variables.scss';
 
 .accordion {
-  max-width: 500px;
   overflow: hidden;
   border-radius: 6px;
 
@@ -36,7 +35,7 @@
 
     p {
       margin: 0;
-      padding: 20px;
+      padding: 10px 20px 0 10px;
     }
   }
 
