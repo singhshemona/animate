@@ -48,7 +48,7 @@ export const Accordion = ({ icon }: Props) => {
         <div key={i++} className="selection">
           <button onClick={toggleAccordion} className={accordion.number}>
             {whichAccordion === accordion.number ? '-' : '+'}
-            {accordion.button}
+            <span className="title">{accordion.button}</span>
           </button>
           <div
             tabIndex={0}

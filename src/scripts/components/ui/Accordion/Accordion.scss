@@ -3,14 +3,15 @@
 .accordion {
   overflow: hidden;
   border-radius: 6px;
+  border: 1px solid $primary;
 
   button {
     min-width: 100%;
     text-align: left;
     padding: 14px;
     border: 0;
-    font-size: 16px;
-    background: $red;
+    font-size: 18px;
+    background: $primary;
     color: $secondary;
     font-weight: bold;
     border-bottom: 1px solid $secondary;
@@ -21,6 +22,11 @@
       outline-offset: -6px;
       outline-color: $secondary;
     }
+
+    .title {
+      margin-left: 8px;
+      letter-spacing: 1px;
+    }
   }
 
   .selection:nth-last-child(1) button {
@@ -30,7 +36,7 @@
   .content {
     background: $secondary;
     font-size: 14px;
-    color: $red;
+    color: $primary;
     overflow: auto;
 
     p {
