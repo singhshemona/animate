@@ -18,5 +18,5 @@ export default {
 export const Success = () => <Loading endingMsg={text('Ending Message', 'Data Loaded!')} outcome="success" />;
 
 export const Failure = () => (
-  <Loading endingMsg={text('Ending Message', "Sorry, that didn't work. Please try again!")} outcome="failure" />
+  <Loading endingMsg={text('Ending Message', 'Sorry that did not work. Please try again!')} outcome="failure" />
 );

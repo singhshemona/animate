@@ -14,11 +14,11 @@ export const Loading = ({ outcome, endingMsg }: Props) => {
       fetch('https://jsonplaceholder.typicode.com/posts')
         .then((response) => response.json())
         .then((json) => {
-          // just to see if data request worked
+          // console to test if data request worked
           console.log(json);
           hasLoaded(true);
         });
-      // put to see spinner for at least a second
+      // 1100 set to see spinner for at least a second
       // can update this or remove line #13, #23, and #25 entirely
     }, 1100);
 

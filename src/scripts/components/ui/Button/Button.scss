@@ -31,6 +31,10 @@
   animation: pressed .1s ease forwards;
 }
 
+// in the keyframes, the first box-shadow color must be a few shades lighter than 
+// the background of .background and .button (set on line 9) and
+// the second box-shadow color must be a few shades darker
+
 @keyframes unpressed {
   from {
     box-shadow: transparent;
@@ -38,8 +42,8 @@
 
   to {
     box-shadow:  
-      5px 5px 12px #5D987B, 
-      -5px -5px 12px #B3D0C2;
+      5px 5px 12px #36594A, 
+      -5px -5px 12px #5D987E;
   }
 }
 
@@ -50,7 +54,7 @@
 
   to {
     box-shadow: 
-      inset 5px 5px 12px #5D987B, 
-      inset -5px -5px 12px #B3D0C2;
+      inset 5px 5px 12px #36594A, 
+      inset -5px -5px 12px #5D987E;
   }
 }

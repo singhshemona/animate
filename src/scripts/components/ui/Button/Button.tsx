@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import './Button.scss';
 
-export const Button = () => {
+type Props = {
+  activeMessage: string;
+  deactiveMessage: string;
+};
+
+export const Button = ({ activeMessage, deactiveMessage }: Props) => {
   const [click, isClicked] = useState(false);
 
   const toggleButton = () => {
@@ -11,7 +16,9 @@ export const Button = () => {
   return (
     <div className="background">
       <button onClick={toggleButton} className={'button ' + (click ? 'pressed' : 'unpressed')}>
-        {click ? 'Action is Done!' : 'Do some action'}
+        {/* to understand difference between activeMessage and 
+        deactiveMessage, see knobs of the button story */}
+        {click ? activeMessage : deactiveMessage}
       </button>
     </div>
   );
