@@ -24,7 +24,6 @@
     }
 
     .title {
-      margin-left: 8px;
       letter-spacing: 1px;
     }
   }
@@ -55,6 +54,12 @@
   .third-show {
     height: 130px;
     transition: ease-out .3s;
+  }
+
+  .first,
+  .second,
+  .third {
+    letter-spacing: 1px;
   }
 }
 

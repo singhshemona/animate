@@ -1,12 +1,16 @@
 @import 'styles/variables.scss';
 
-body,
+.background {
+  padding: 70px;
+}
+
+.background,
 .button {
   background: $green;
+  width: 200px;
 }
 
 .button {
-  width: 200px;
   height: 200px;
   border-radius: 50%;
   border: 0;

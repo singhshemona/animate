@@ -9,8 +9,10 @@ export const Button = () => {
   };
 
   return (
-    <button onClick={toggleButton} className={'button ' + (click ? 'pressed' : 'unpressed')}>
-      {click ? 'Action is Done!' : 'Do some action'}
-    </button>
+    <div className="background">
+      <button onClick={toggleButton} className={'button ' + (click ? 'pressed' : 'unpressed')}>
+        {click ? 'Action is Done!' : 'Do some action'}
+      </button>
+    </div>
   );
 };

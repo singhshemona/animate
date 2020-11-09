@@ -10,4 +10,6 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const Default = () => <Accordion icon={'+'} />;
+export const Default = () => <Accordion indicator={false} />;
+
+export const WithIndicator = () => <Accordion indicator={true} />;

@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import './Accordion.scss';
 
 type Props = {
-  icon: string;
+  indicator: boolean;
 };
 
-export const Accordion = ({ icon }: Props) => {
+export const Accordion = ({ indicator }: Props) => {
   const [whichAccordion, isWhichAccordion] = useState('');
 
   const toggleAccordion = (event: any) => {
@@ -47,8 +47,8 @@ export const Accordion = ({ icon }: Props) => {
       {accordions.map((accordion, i) => (
         <div key={i++} className="selection">
           <button onClick={toggleAccordion} className={accordion.number}>
-            {whichAccordion === accordion.number ? '-' : '+'}
-            <span className="title">{accordion.button}</span>
+            {indicator && (whichAccordion === accordion.number ? '- ' : '+ ')}
+            {accordion.button}
           </button>
           <div
             tabIndex={0}

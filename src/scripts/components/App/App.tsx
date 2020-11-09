@@ -24,6 +24,7 @@ export default function App() {
       <Progress endingMsg="Data Loaded!" outcome="success" />
       <Range />
       <Shake /> */}
+      <Button />
     </>
   );
 }
