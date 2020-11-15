@@ -9,80 +9,32 @@
   display: flex;
   overflow-x: scroll;
   margin: 0 70px;
+
+  .card {
+    min-width: 350px;
+    margin: 30px;
+    padding: 0 20px;
+    background: $red;
+    color: $secondary;
+  }
 }
 
 .options {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
   button {
     font-size: 18px;
     padding: 8px 16px;
     border-width: 4px;
     border-style: solid;
-    color: $primary;
+    border-color: $red;
+    color: $red;
     font-weight: bold;
-  }
-}
 
-.card {
-  min-width: 350px;
-  margin: 30px;
-  padding: 0 20px;
-}
-
-.card1 {
-  background: $red;
-  color: $secondary;
-}
-
-.option1 {
-  border-color: $red;
-
-  &.active {
-    background: $red;
-    color: $secondary;
-  }
-}
-
-.card2 {
-  background: $secondary;
-  color: $primary;
-}
-
-.option2 {
-  border-color: $secondary;
-
-  &.active {
-    background: $secondary;
-    color: $primary;
-  }
-}
-
-.card3 {
-  background: $green;
-  color: $secondary;
-}
-
-.option3 {
-  border-color: $green;
-
-  &.active {
-    background: $green;
-    color: $secondary;
-  }
-}
-
-.card4 {
-  background: $primary;
-  color: $secondary;
-}
-
-.option4 {
-  border-color: $primary;
-
-  &.active {
-    background: $primary;
-    color: $secondary;
+    &.active {
+      background: $red;
+      color: $secondary;
+    }
   }
 }

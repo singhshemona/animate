@@ -5,7 +5,7 @@ export const ItemSelection = () => {
   const [isLift, setIsLifted] = useState(false);
 
   return (
-    <div className="card " onMouseEnter={() => setIsLifted(true)} onMouseLeave={() => setIsLifted(false)}>
+    <div className="item-select-card " onMouseEnter={() => setIsLifted(true)} onMouseLeave={() => setIsLifted(false)}>
       <div className={isLift ? 'lifted' : 'notLifted'}>
         <img src="https://via.placeholder.com/150" alt="placeholder" />
         <h2>Hello</h2>

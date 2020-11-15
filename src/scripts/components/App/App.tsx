@@ -25,20 +25,18 @@ export default function App() {
         confirmation="Thank you for completing the form!"
         error="Please enter something."
       /> */}
+      {/* <Pagination numberOfItems={5} /> */}
 
       {/* ========== the following still need comments and stories ========== */}
 
       {/* stories can be layers of menu, ex. one layer dropdown menu, two layer dropdown menu */}
-      <Menu />
+      {/* <Menu /> */}
 
       {/* for this one, see if you can make the height/width be stories, 
           ex. expanding horizontally and expanding vertically
           instead of taking up full screen, maybe put it in a container that you can set the
           height/width of and it always takes the full height/width of container */}
-      {/* <CardEnlarge /> */}
-
-      {/* for this one, see if you can make the # of cards be a knob */}
-      {/* <Pagination /> */}
+      <CardEnlarge />
     </>
   );
 }
