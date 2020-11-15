@@ -6,6 +6,13 @@ export const Menu = () => {
   const [second, setSecond] = useState(false);
   const [third, setThird] = useState(false);
 
+  const menuInfo = {
+    levelOne: ['Home', 'About Us', 'Contact'],
+    levelTwo: ['Current Projects', 'Upcoming Visions', 'Quarter 4 Goals'],
+    levelThree: ['Sprint Planning', 'Mission Statement', 'More Words'],
+    first: ['Home', { expanded: ['Current Projects', 'Upcoming Visions', 'Quarter 4 Goals'] }],
+  };
+
   return (
     <nav>
       <ul className="menu-items">

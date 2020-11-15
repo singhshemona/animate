@@ -18,14 +18,21 @@ export default function App() {
       {/* <Button activeMessage="Action is Done!" deactiveMessage="Do some action" /> */}
       {/* <Loading endingMsg="Data Loaded!" outcome="success" /> */}
       {/* <Progress endingMsg="Data Loaded!" outcome="success" /> */}
+      {/* <ItemSelection /> */}
+      {/* <Range showValue={true} /> */}
+      {/* <Shake
+        prompt="Enter some text here. If you it remains empty, the form will be mad."
+        confirmation="Thank you for completing the form!"
+        error="Please enter something."
+      /> */}
 
       {/* the following still need comments and stories */}
-      <CardEnlarge />
-      {/* <ItemSelection />
+
+      {/* for this one, see if you can make the height/width the props of the story */}
+      {/* <CardEnlarge /> */}
+
       <Menu />
-      <Pagination />
-      <Range />
-      <Shake /> */}
+      {/* <Pagination /> */}
     </>
   );
 }

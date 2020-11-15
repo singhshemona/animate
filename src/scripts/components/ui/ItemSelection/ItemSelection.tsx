@@ -15,7 +15,8 @@ export const ItemSelection = () => {
           with the sharks drink from the firehose
         </p>
         {isLift && (
-          <div className={'toggleContent'}>
+          // content in here only shows up on hover
+          <div className="toggleContent">
             <button className="select">We want this to appear on hover</button>
             <p className="disclaimer">Disclaimer: clicking on this will deliver a flower to your door</p>
           </div>

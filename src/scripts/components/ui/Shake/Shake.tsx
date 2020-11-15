@@ -1,27 +1,31 @@
 import React, { useState } from 'react';
 import './Shake.scss';
 
-export const Shake = () => {
+type Props = {
+  prompt: string;
+  confirmation: string;
+  error: string;
+};
+
+export const Shake = ({ prompt, confirmation, error }: Props) => {
   const [value, setValue] = useState('');
-  const [thanks, setThanks] = useState(false);
-  const [error, setError] = useState(false);
   const [shake, setShake] = useState(false);
+  const [submitted, setSubmitted] = useState('default');
 
   const approval = (event: any) => {
     event.preventDefault();
     if (value === '') {
       setShake(true);
-      setError(true);
+      setSubmitted('empty');
     } else {
-      setThanks(true);
-      setError(false);
+      setSubmitted('filled');
     }
   };
 
   return (
     <>
       <form onAnimationEnd={() => setShake(false)} className={'form ' + (shake ? 'shake' : null)}>
-        <p className="prompt">Enter some text here. If you don&apos;t, the box will be mad</p>
+        <p className="prompt">{prompt}</p>
         <div className="flex">
           <input
             className="input"
@@ -34,9 +38,9 @@ export const Shake = () => {
             Submit
           </button>
         </div>
+        {submitted === 'filled' && <p className="thanks">{confirmation}</p>}
+        {submitted === 'empty' && <p className="error">{error}</p>}
       </form>
-      {thanks && <p className="thanks">Thank you for completing the form!</p>}
-      {error && <p className="error">Please enter something.</p>}
     </>
   );
 };

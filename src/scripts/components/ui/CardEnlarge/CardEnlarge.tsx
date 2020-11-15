@@ -10,11 +10,11 @@ export const CardEnlarge = () => {
   };
 
   return (
-    <main onClick={() => isOpened(true)} className={'card ' + (open ? 'yes' : 'no')}>
+    <main onClick={() => isOpened(true)} className={'card ' + (open ? 'opened' : 'closed')}>
       <div className="heading">
         <h2>This is the Title</h2>
         {open && (
-          <button className="close" onClick={close}>
+          <button className="shrink-button" onClick={close}>
             X
           </button>
         )}

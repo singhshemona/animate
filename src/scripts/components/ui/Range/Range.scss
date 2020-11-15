@@ -8,34 +8,34 @@
   -webkit-appearance: none;
   appearance: none;
   width: 400px; 
-  height: 25px;
-  background: $secondary;
-  border-radius: 6px;
+  height: 20px;
+  background: $green;
+  border-radius: 8px;
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     border-radius: 50%;
-    height: 65px;
-    width: 65px;
-    background: $primary;
+    height: 60px;
+    width: 60px;
+    background: $secondary;
     cursor: pointer;
-    border: 12px solid $secondary;
+    border: 12px solid $green;
 
     &:hover { 
       transform: scale(1.2);
-      transition: ease-out .2s;
+      transition: ease-in-out .2s;
     }
   }
 
   &:focus {
     outline-offset: 8px;
     outline-style: dashed;
-    outline-color: $secondary;
+    outline-color: $green;
   }
 }
 
 .value {
   font-size: 50px;
-  color: $primary;
+  color: $green;
 }

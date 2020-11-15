@@ -1,5 +1,9 @@
 @import 'styles/variables.scss';
 
+.form {
+  margin: 0 30px;
+}
+
 .error {
   color: $red;
 }
@@ -29,6 +33,7 @@
 .input {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
+  padding: 0 10px;
 }
 
 .submit {

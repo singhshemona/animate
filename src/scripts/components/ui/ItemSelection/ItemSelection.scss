@@ -4,7 +4,7 @@
   background: $secondary;
   color: $primary;
   padding: 30px;
-  margin: 80px auto auto auto;
+  margin: 50px auto auto auto;
   width: 300px;
   height: 420px;
   border-radius: 10px;
@@ -25,7 +25,7 @@
 }
 
 .toggleContent {
-  animation: show .5s ease forwards;
+  animation: show .5s ease-in forwards;
 
   .select {
     width: 100%;
@@ -38,14 +38,14 @@
     color: $secondary;
 
     &:hover {
-      background: #DB6443;
-      transition: ease .3s;
+      background: #BF3C22;
+      transition: ease .2s;
     }
 
     &:focus {
       outline-style: dotted;
       outline-width: thin;
-      outline-offset: 4px;
+      outline-offset: 3px;
       outline-color: $red;
     }
   }
@@ -56,6 +56,7 @@
   }
 }
 
+// animates appearance of hidden content on the bottom
 @keyframes show {
   from {
     opacity: 0;
