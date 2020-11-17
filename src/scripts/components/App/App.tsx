@@ -32,14 +32,7 @@ export default function App() {
       {/* stories can be layers of menu, ex. one layer dropdown menu, two layer dropdown menu */}
       {/* <Menu /> */}
 
-      {/* for this one, see if you can make the height/width be stories, 
-          ex. expanding horizontally and expanding vertically
-          instead of taking up full screen, maybe put it in a container that you can set the
-          height/width of and it always takes the full height/width of container 
-          
-          I think only expanding it vertically is the best bet - but then how does that differ
-          from an accordion? UGHHHH
-      */}
+      {/* knob can be inserting text */}
       <CardEnlarge />
     </>
   );

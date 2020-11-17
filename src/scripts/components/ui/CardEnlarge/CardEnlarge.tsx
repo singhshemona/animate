@@ -9,9 +9,15 @@ export const CardEnlarge = () => {
     isOpened(false);
   };
 
-  const text = {
-    title: 'Title',
-    content: `<p>
+  const shorten = (str: string, maxLen: number, separator = ' ') => {
+    if (str.length <= maxLen) {
+      return str;
+    } else {
+      return str.substr(0, str.lastIndexOf(separator, maxLen));
+    }
+  };
+
+  const articleContent = `<p>
     If we find life out there, and it's not us, we will deem it not intelligent. But what may be equally as
     likely is that we find life that's vastly more intelligent than we are. If that's the case, we are putty in
     their hands.
@@ -32,27 +38,33 @@ export const CardEnlarge = () => {
     do any of that, yet we share 99 percent DNA. Everything that we are, that distinguishes us from chimps,
     emerges from that one-percent difference.
   </p>
-      `,
-  };
+      `;
+
   return (
-    <>
-      <main className={'card ' + (open ? 'opened' : 'closed')}>
-        <div className="heading">
-          <h2>This is the Title</h2>
-          {open && (
-            <button className="shrink-button" onClick={close}>
-              X
-            </button>
-          )}
-        </div>
-        <article dangerouslySetInnerHTML={{ __html: text.content }} />
-        {!open && <button onClick={() => isOpened(true)}>Expand for more info</button>}
-        <aside>
-          <p>
-            Last Edited By: <a href="/#">John Doe</a>
-          </p>
-        </aside>
-      </main>
-    </>
+    <main className={'card ' + (open ? 'opened' : 'closed')}>
+      <div className="heading">
+        <h2>Let&apos;s Learn More About the Cosmos</h2>
+        {open && (
+          <button className="shrink-button" onClick={close}>
+            X
+          </button>
+        )}
+      </div>
+      {open ? (
+        <article dangerouslySetInnerHTML={{ __html: articleContent }} />
+      ) : (
+        <>
+          <article dangerouslySetInnerHTML={{ __html: shorten(articleContent, 420) + '...' }} />
+          <button className="expand" onClick={() => isOpened(true)}>
+            Expand for more info
+          </button>
+        </>
+      )}
+      <aside>
+        <p>
+          Last Edited By: <a href="/#">John Doe</a>
+        </p>
+      </aside>
+    </main>
   );
 };
