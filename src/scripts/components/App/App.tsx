@@ -35,7 +35,11 @@ export default function App() {
       {/* for this one, see if you can make the height/width be stories, 
           ex. expanding horizontally and expanding vertically
           instead of taking up full screen, maybe put it in a container that you can set the
-          height/width of and it always takes the full height/width of container */}
+          height/width of and it always takes the full height/width of container 
+          
+          I think only expanding it vertically is the best bet - but then how does that differ
+          from an accordion? UGHHHH
+      */}
       <CardEnlarge />
     </>
   );

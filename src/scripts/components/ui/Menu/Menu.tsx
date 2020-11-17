@@ -7,10 +7,20 @@ export const Menu = () => {
   const [third, setThird] = useState(false);
 
   const menuInfo = {
-    levelOne: ['Home', 'About Us', 'Contact'],
-    levelTwo: ['Current Projects', 'Upcoming Visions', 'Quarter 4 Goals'],
-    levelThree: ['Sprint Planning', 'Mission Statement', 'More Words'],
-    first: ['Home', { expanded: ['Current Projects', 'Upcoming Visions', 'Quarter 4 Goals'] }],
+    levelOne: {
+      home: 'Home',
+      about: 'About Us',
+      contact: 'Contact',
+    },
+    levelTwo: {
+      home: ['Current Projects', 'Upcoming Visions', 'Quarter 4 Goals'],
+      about: ['How', 'Can I Make', 'These Words Different'],
+      contact: ['How', 'Can I Make', 'These Words Different'],
+    },
+    levelThree: {
+      home: ['Sprint Planning', 'Mission Statement', 'More Words'],
+      about: ['How', 'Can I Make', 'These Words Different'],
+    },
   };
 
   return (
