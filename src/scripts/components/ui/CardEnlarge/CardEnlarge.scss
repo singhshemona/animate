@@ -5,18 +5,11 @@
   color: $red;
 }
 
-.closed {
-  overflow: hidden;
-}
-
-.opened {
-  overflow: scroll;
-}
-
 .card {
   background: $secondary;
   padding: 30px;
   box-sizing: border-box;
+  margin: 0 auto;
 
   .heading {
     display: flex;
@@ -37,10 +30,12 @@
 
   .expand {
     padding: 8px;
-    background: $red;
     border-radius: 6px;
-    border: 0;
-    color: $secondary;
+    border: 3px solid $red;
+    color: $red;
+    font-weight: bold;
+    background: $secondary;
+    cursor: pointer;
 
     &:focus {
       outline-style: dotted;
@@ -57,10 +52,13 @@
   max-width: 350px;
   height: 480px;
   border-radius: 6px;
+  overflow: hidden;
+  margin-top: 70px;
 }
 
 .opened {
-  animation: enlargeCard .5s cubic-bezier(.35,.78,.37,1) forwards;
+  overflow: scroll;
+  animation: enlargeCard .4s cubic-bezier(.35,.78,.37,1) forwards;
 
   .shrink-button {
     font-size: 24px;

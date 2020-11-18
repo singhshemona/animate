@@ -4,10 +4,10 @@ import './CardEnlarge.scss';
 export const CardEnlarge = () => {
   const [open, isOpened] = useState(false);
 
-  const close = (e: any) => {
-    e.stopPropagation();
-    isOpened(false);
-  };
+  // const close = (e: any) => {
+  //   e.stopPropagation();
+  //   isOpened(false);
+  // };
 
   const shorten = (str: string, maxLen: number, separator = ' ') => {
     if (str.length <= maxLen) {
@@ -45,13 +45,18 @@ export const CardEnlarge = () => {
       <div className="heading">
         <h2>Let&apos;s Learn More About the Cosmos</h2>
         {open && (
-          <button className="shrink-button" onClick={close}>
+          <button className="shrink-button" onClick={() => isOpened(false)}>
             X
           </button>
         )}
       </div>
       {open ? (
-        <article dangerouslySetInnerHTML={{ __html: articleContent }} />
+        <>
+          <article dangerouslySetInnerHTML={{ __html: articleContent }} />
+          <button className="expand" onClick={() => isOpened(false)}>
+            Collapse
+          </button>
+        </>
       ) : (
         <>
           <article dangerouslySetInnerHTML={{ __html: shorten(articleContent, 420) + '...' }} />
