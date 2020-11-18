@@ -24,7 +24,7 @@
     color: $primary;
   }
 
-  aside {
+  .author {
     font-size: 12px;
   }
 
@@ -48,7 +48,7 @@
 
 .closed {
   // max-width and height must be the same as 
-  // 'from' rule in enlargeCard keyframe
+  // in the 'from' rule in enlargeCard keyframe
   max-width: 350px;
   height: 480px;
   border-radius: 6px;

@@ -26,14 +26,12 @@ export default function App() {
         error="Please enter something."
       /> */}
       {/* <Pagination numberOfItems={5} /> */}
+      {/* <CardEnlarge text={'some text to test'} /> */}
 
       {/* ========== the following still need comments and stories ========== */}
 
       {/* stories can be layers of menu, ex. one layer dropdown menu, two layer dropdown menu */}
-      {/* <Menu /> */}
-
-      {/* knob can be inserting text */}
-      <CardEnlarge />
+      <Menu />
     </>
   );
 }
