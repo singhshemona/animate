@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Menu.scss';
 
 type Props = {
-  onKeyPress: () => void;
-  onClick: () => void;
+  selectItem: React.ReactEventHandler;
   text: string;
-  sublist?: Element;
+  subList?: React.ReactNode;
 };
 
-export const List = ({ onKeyPress, onClick, text, sublist }: Props) => {
+export const List = ({ selectItem, text, subList }: Props) => {
   return (
-    <li className="heading" tabIndex={0} onKeyPress={onKeyPress} onClick={onClick}>
+    <li className="heading" tabIndex={0} onKeyPress={selectItem} onClick={selectItem}>
       {text}
-      {sublist}
+      {subList}
     </li>
   );
 };

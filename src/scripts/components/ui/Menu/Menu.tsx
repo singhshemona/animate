@@ -10,10 +10,11 @@ export const Menu = () => {
 
   const [item, setItem] = useState('');
 
-  // const changeItem = (event: any) => {
-  //   setItem(event.target.value);
-  //   console.log(item);
-  // };
+  const updateItemSelected = (selected: string) => {
+    if (item === selected) {
+      setItem('');
+    } else setItem(selected);
+  };
 
   const levelOne = ['Home', 'About Us', 'Contact'];
 
@@ -24,43 +25,6 @@ export const Menu = () => {
   ];
 
   const levelThree = ['Sprint Planning', 'Mission Statement', 'More Words'];
-
-  // const menu = {
-  //   levelOne: {
-  //     home: 'Home',
-  //     about: 'About Us',
-  //     contact: 'Contact',
-  //   },
-  //   levelTwo: {
-  //     home: ['Current Projects', 'Upcoming Visions', 'Quarter 4 Goals'],
-  //     about: ['How', 'Can I Make', 'These Words Different'],
-  //     contact: ['How', 'Can I Make', 'These Words Different'],
-  //   },
-  //   levelThree: {
-  //     home: ['Sprint Planning', 'Mission Statement', 'More Words'],
-  //     about: ['How', 'Can I Make', 'These Words Different'],
-  //   },
-  // };
-
-  // const menu = [
-  //   {
-  //     level: 'one',
-  //     home: 'Home',
-  //     about: 'About Us',
-  //     contact: 'Contact',
-  //   },
-  //   {
-  //     level: 'two',
-  //     home: ['Current Projects', 'Upcoming Visions', 'Quarter 4 Goals'],
-  //     about: ['How', 'Can I Make', 'These Words Different'],
-  //     contact: ['How', 'Can I Make', 'These Words Different'],
-  //   },
-  //   {
-  //     level: 'three',
-  //     home: ['Sprint Planning', 'Mission Statement', 'More Words'],
-  //     about: ['How', 'Can I Make', 'These Words Different'],
-  //   },
-  // ];
 
   return (
     <nav>
@@ -126,19 +90,22 @@ export const Menu = () => {
           )}
         </li> */}
 
-        {console.log(levelOne[2])}
-        {console.log(item)}
+        <List
+          selectItem={() => updateItemSelected('home')}
+          text={levelOne[0]}
+          subList={
+            item === 'home' && (
+              <ul tabIndex={0} className="level-two">
+                <List selectItem={() => updateItemSelected('projects')} text={levelTwo[0][0]} />
+                <List selectItem={() => updateItemSelected('visions')} text={levelTwo[0][1]} />
+                <List selectItem={() => updateItemSelected('goals')} text={levelTwo[0][2]} />
+              </ul>
+            )
+          }
+        />
 
-        <List onKeyPress={() => setItem('home')} onClick={() => setItem('home')} text={levelOne[0]} />
-        {item === 'home' && (
-          <ul tabIndex={0} className="level-two">
-            <List onKeyPress={() => setItem('projects')} onClick={() => setItem('projects')} text={levelTwo[0][0]} />
-            <List onKeyPress={() => setItem('visions')} onClick={() => setItem('visions')} text={levelTwo[0][1]} />
-            <List onKeyPress={() => setItem('goals')} onClick={() => setItem('goals')} text={levelTwo[0][2]} />
-          </ul>
-        )}
-        <List onKeyPress={() => setItem('about')} onClick={() => setItem('about')} text={levelOne[1]} />
-        <List onKeyPress={() => setItem('contact')} onClick={() => setItem('contact')} text={levelOne[2]} />
+        <List selectItem={() => updateItemSelected('about')} text={levelOne[1]} />
+        <List selectItem={() => updateItemSelected('contact')} text={levelOne[2]} />
       </ul>
     </nav>
   );
