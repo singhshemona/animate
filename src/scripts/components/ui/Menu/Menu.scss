@@ -1,12 +1,12 @@
 @import 'styles/variables.scss';
 
-.menu-items,
-.sub-items {
+.menu,
+.level-two {
   background: $secondary;
   border-radius: 6px;
 }
 
-.menu-items {
+.menu {
   padding: 20px;
   display: flex;
   justify-content: space-around;
@@ -16,22 +16,29 @@
     list-style-type: none;
   }
 
+  .heading, 
+  .level-two-heading {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
   .heading {
     font-size: 22px;
   }
-
-  .selected {
-    text-decoration: underline;
-  }
 }
 
-.sub-items {
+.level-two {
   overflow: hidden;
   white-space: nowrap;
   animation: appear .2s ease-in forwards;
   position: absolute;
   line-height: 34px;
   padding: 30px 20px 20px 20px;
+}
+
+.level-three {
+  animation: dropdown .2s ease-in forwards;
+  padding: 0 0 0 20px;
 }
 
 @keyframes appear {
@@ -43,6 +50,23 @@
   90% {
     width: 100px;
     height: 100px;
+  }
+
+  100% {
+    width: auto;
+    height: auto;
+  }
+}
+
+@keyframes dropdown {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  90% {
+    width: 50px;
+    height: 90px;
   }
 
   100% {
