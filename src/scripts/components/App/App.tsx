@@ -31,7 +31,7 @@ export default function App() {
       {/* ========== the following still need comments and stories ========== */}
 
       {/* stories can be layers of menu, ex. one layer dropdown menu, two layer dropdown menu */}
-      <Menu />
+      <Menu levels={3} />
     </>
   );
 }

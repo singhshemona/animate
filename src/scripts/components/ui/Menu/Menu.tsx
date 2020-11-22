@@ -1,10 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { List } from './List';
 import './Menu.scss';
 
-export const Menu = () => {
+type Props = {
+  levels: number;
+};
+
+export const Menu = ({ levels }: Props) => {
+  // The ref, handleClick, and useEffect are to close any open menus if the
+  // user clicks anywhere outside of the menu
+  const ref = useRef(null);
+
+  const handleClick = (event: any) => {
+    if ((ref.current as any).contains(event.target)) {
+      return;
+    } else setItem('');
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleClick);
+    return () => {
+      document.removeEventListener('click', handleClick);
+    };
+  }, []);
+
   const [item, setItem] = useState('');
 
+  // this updates what menu item was selected and opens its
+  // corresponding dropdown
   const updateItemSelected = (selected: string) => {
     if (item === selected) {
       setItem('');
@@ -22,7 +45,7 @@ export const Menu = () => {
   const levelThree = ['Sprint Planning', 'Mission Statement', 'Forward Trajectory'];
 
   return (
-    <nav>
+    <nav ref={ref}>
       <ul tabIndex={0} className="menu">
         <List
           heading="dropdown"
@@ -51,11 +74,14 @@ export const Menu = () => {
                   selectItem={() => updateItemSelected('can')}
                   text={levelTwo[1][1]}
                   subList={
-                    <ul tabIndex={0} className="level-three">
-                      <li>{levelThree[0]}</li>
-                      <li>{levelThree[1]}</li>
-                      <li>{levelThree[2]}</li>
-                    </ul>
+                    // this third level menu only appears if we pass '3' to the levels prop
+                    levels === 3 && (
+                      <ul tabIndex={0} className="level-three">
+                        <li tabIndex={0}>{levelThree[0]}</li>
+                        <li tabIndex={0}>{levelThree[1]}</li>
+                        <li tabIndex={0}>{levelThree[2]}</li>
+                      </ul>
+                    )
                   }
                 />
                 <List selectItem={() => updateItemSelected('words')} text={levelTwo[1][2]} />

@@ -16,14 +16,10 @@
     list-style-type: none;
   }
 
-  .dropdown, 
-  .level-two-heading {
-    text-decoration: underline;
-    cursor: pointer;
-  }
-
   .dropdown {
     font-size: 22px;
+    text-decoration: underline;
+    cursor: pointer;
   }
 }
 
@@ -33,11 +29,11 @@
   animation: appear .2s ease-in forwards;
   position: absolute;
   line-height: 34px;
-  padding: 30px 20px 20px 20px;
+  padding: 10px 20px 20px 20px;
+  margin-top: 13px;
 }
 
 .level-three {
-  animation: dropdown .2s ease-in forwards;
   padding: 0 0 0 20px;
 }
 
@@ -50,23 +46,6 @@
   90% {
     width: 100px;
     height: 100px;
-  }
-
-  100% {
-    width: auto;
-    height: auto;
-  }
-}
-
-@keyframes dropdown {
-  0% {
-    width: 0;
-    height: 0;
-  }
-
-  90% {
-    width: 50px;
-    height: 90px;
   }
 
   100% {
