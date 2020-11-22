@@ -4,7 +4,7 @@ import { Range } from './Range';
 
 export default {
   component: Range,
-  title: 'Range',
+  title: 'Components/Small/Range',
 };
 
 export const HideValue = () => <Range showValue={false} />;

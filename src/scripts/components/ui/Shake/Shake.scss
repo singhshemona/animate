@@ -1,49 +1,49 @@
 @import 'styles/variables.scss';
 
-.form {
+.shake-form {
   margin: 0 30px;
+
+  .error {
+    color: $red;
+  }
+  
+  .thanks {
+    color: $green;
+  }
+
+  .prompt {
+    color: $primary;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .input,
+  .submit {
+    border-color: $primary;
+  }
+  
+  .input {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    padding: 0 10px;
+  }
+  
+  .submit {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    color: white;
+    background: $primary;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 4px 14px;
+  }
 }
 
-.error {
-  color: $red;
-}
-
-.thanks {
-  color: $green;
-}
-
-.shake {
+.shaking {
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
-}
-
-.prompt {
-  color: $primary;
-}
-
-.flex {
-  display: flex;
-}
-
-.input,
-.submit {
-  border-color: $primary;
-}
-
-.input {
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  padding: 0 10px;
-}
-
-.submit {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-  color: white;
-  background: $primary;
-  font-weight: bold;
-  font-size: 18px;
-  padding: 4px 14px;
 }
 
 @keyframes shake {

@@ -5,7 +5,7 @@ import { Button } from './Button';
 
 export default {
   component: Button,
-  title: 'Button',
+  title: 'Components/Small/Button',
 };
 
 export const Default = () => (

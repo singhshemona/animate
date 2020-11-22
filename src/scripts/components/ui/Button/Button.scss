@@ -1,60 +1,63 @@
 @import 'styles/variables.scss';
 
-.background {
-  padding: 70px;
-}
 
-.background,
+
+.background-of-button,
 .button {
   background: $green;
   width: 200px;
 }
 
-.button {
-  height: 200px;
-  border-radius: 50%;
-  border: 0;
-  color: white;
-  font-size: 16px;
+.background-of-button {
+  padding: 70px;
 
-  &:focus {
-    outline: 0;
-    font-weight: bold;
+  .button {
+    height: 200px;
+    border-radius: 50%;
+    border: 0;
+    color: white;
+    font-size: 16px;
+  
+    &:focus {
+      outline: 0;
+      font-weight: bold;
+    }
+  }
+  
+  .unpressed {
+    animation: unpressed .1s ease forwards;
+  }
+  
+  .pressed {
+    animation: pressed .1s ease forwards;
+  }
+  
+  // in the keyframes, the first box-shadow color must be a few shades lighter than 
+  // the background of .background and .button (set on line 9) and
+  // the second box-shadow color must be a few shades darker
+  
+  @keyframes unpressed {
+    from {
+      box-shadow: transparent;
+    }
+  
+    to {
+      box-shadow:  
+        5px 5px 12px #36594A, 
+        -5px -5px 12px #5D987E;
+    }
+  }
+  
+  @keyframes pressed {
+    from {
+      box-shadow: transparent;
+    }
+  
+    to {
+      box-shadow: 
+        inset 5px 5px 12px #36594A, 
+        inset -5px -5px 12px #5D987E;
+    }
   }
 }
 
-.unpressed {
-  animation: unpressed .1s ease forwards;
-}
-
-.pressed {
-  animation: pressed .1s ease forwards;
-}
-
-// in the keyframes, the first box-shadow color must be a few shades lighter than 
-// the background of .background and .button (set on line 9) and
-// the second box-shadow color must be a few shades darker
-
-@keyframes unpressed {
-  from {
-    box-shadow: transparent;
-  }
-
-  to {
-    box-shadow:  
-      5px 5px 12px #36594A, 
-      -5px -5px 12px #5D987E;
-  }
-}
-
-@keyframes pressed {
-  from {
-    box-shadow: transparent;
-  }
-
-  to {
-    box-shadow: 
-      inset 5px 5px 12px #36594A, 
-      inset -5px -5px 12px #5D987E;
-  }
-}

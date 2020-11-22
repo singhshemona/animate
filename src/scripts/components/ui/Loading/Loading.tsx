@@ -18,7 +18,7 @@ export const Loading = ({ outcome, endingMsg }: Props) => {
           console.log(json);
           hasLoaded(true);
         });
-      // 1100 set to see spinner for at least a second
+      // 1100 set see spinner for at least a second
       // can update this or remove line #13, #23, and #25 entirely
     }, 1100);
 
@@ -26,7 +26,7 @@ export const Loading = ({ outcome, endingMsg }: Props) => {
   }, []);
 
   return (
-    <>
+    <div className="spinner-container">
       {loading ? (
         <p className={outcome}>{endingMsg}</p>
       ) : (
@@ -34,6 +34,6 @@ export const Loading = ({ outcome, endingMsg }: Props) => {
           <circle cx="30" cy="30" r="20" className="circle" />
         </svg>
       )}
-    </>
+    </div>
   );
 };

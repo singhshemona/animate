@@ -92,11 +92,11 @@ export const Pagination = ({ numberOfItems }: Props) => {
   const buttons = [1, 2, 3, 4, 5, 6];
 
   return (
-    <div>
+    <div className="pagination">
       <div className="slides">
         {cards.slice(0, numberOfItems).map((card, i) => (
           // eslint-disable-next-line
-          <div key={i++} className='card' ref={card.ref}>
+          <div tabIndex={0} key={i++} className='card' ref={card.ref}>
             <h1>{card.title}</h1>
             <p>{card.subtext}</p>
           </div>

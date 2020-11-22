@@ -21,35 +21,38 @@
     text-decoration: underline;
     cursor: pointer;
   }
-}
 
-.level-two {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: appear .2s ease-in forwards;
-  position: absolute;
-  line-height: 34px;
-  padding: 10px 20px 20px 20px;
-  margin-top: 13px;
-}
-
-.level-three {
-  padding: 0 0 0 20px;
-}
-
-@keyframes appear {
-  0% {
-    width: 0;
-    height: 0;
+  .level-two {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: appear .2s ease-in forwards;
+    position: absolute;
+    line-height: 34px;
+    padding: 10px 20px 20px 20px;
+    margin-top: 12px;
+    font-size: 16px;
   }
-
-  90% {
-    width: 100px;
-    height: 100px;
+  
+  .level-three {
+    padding: 0 0 0 20px;
   }
-
-  100% {
-    width: auto;
-    height: auto;
+  
+  @keyframes appear {
+    0% {
+      width: 0;
+      height: 0;
+    }
+  
+    90% {
+      width: 100px;
+      height: 100px;
+    }
+  
+    100% {
+      width: auto;
+      height: auto;
+    }
   }
+  
 }
+

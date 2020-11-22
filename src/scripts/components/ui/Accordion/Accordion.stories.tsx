@@ -4,7 +4,7 @@ import { Accordion } from './Accordion';
 
 export default {
   component: Accordion,
-  title: 'Accordion',
+  title: 'Components/Large/Accordion',
 };
 
 export const Default = () => <Accordion indicator={false} />;

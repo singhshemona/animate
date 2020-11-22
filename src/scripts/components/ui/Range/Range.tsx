@@ -10,14 +10,17 @@ export const Range = ({ showValue }: Props) => {
 
   return (
     <div className="range">
-      <input
-        onChange={(event) => isValue(event.target.value)}
-        type="range"
-        min="0"
-        max="100"
-        defaultValue="20"
-        className="range-input"
-      />
+      <label>
+        Slider Label
+        <input
+          onChange={(event) => isValue(event.target.value)}
+          type="range"
+          min="0"
+          max="100"
+          defaultValue="20"
+          className="range-input"
+        />
+      </label>
       {showValue && <p className="value">{value}</p>}
     </div>
   );

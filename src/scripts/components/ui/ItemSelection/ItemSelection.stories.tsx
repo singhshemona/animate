@@ -4,7 +4,7 @@ import { ItemSelection } from './ItemSelection';
 
 export default {
   component: ItemSelection,
-  title: 'ItemSelection',
+  title: 'Components/Large/Item Selection',
 };
 
 export const Default = () => <ItemSelection />;

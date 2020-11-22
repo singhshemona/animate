@@ -5,7 +5,7 @@ import { Loading } from './Loading';
 
 export default {
   component: Loading,
-  title: 'Loading',
+  title: 'Components/Small/Loading',
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

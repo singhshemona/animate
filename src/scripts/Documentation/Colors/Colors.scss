@@ -1,0 +1,36 @@
+@import 'styles/variables.scss';
+
+.palette {
+  display: flex;
+  justify-content: space-around;
+
+  p {
+    margin: 5px 0;
+  }
+
+  .hex {
+    font-weight: bold;
+  }
+  
+  .color {
+  height: 150px;
+  width: 150px;
+  }
+
+  .primary {
+    background-color: $primary;
+  }
+  
+  .secondary {
+    background-color: $secondary;
+  }
+
+  .red {
+    background-color: $red;
+  }
+
+  .green {
+    background-color: $green;
+  }
+}
+

@@ -14,7 +14,7 @@ export const Button = ({ activeMessage, deactiveMessage }: Props) => {
   };
 
   return (
-    <div className="background">
+    <div className="background-of-button">
       <button onClick={toggleButton} className={'button ' + (click ? 'pressed' : 'unpressed')}>
         {/* to understand difference between activeMessage and 
         deactiveMessage, see knobs of the button story */}

@@ -1,44 +1,48 @@
 @import 'styles/index.scss';
 @import 'styles/variables.scss';
 
-.success {
+.progress-success {
   .ending-msg {
     color: $green;
   }
 }
 
-.failure {
+.progress-failure {
   .ending-msg {
     color: $red;
   }
 }
 
-.border {
-  width: 200px;
-  height: 40px;
-  stroke-width: 2px;
-  stroke: $primary;
-  fill: transparent;
-}
-
-.filling {
-  width: 200px;
-  height: 40px;
-  fill: $primary;
-  animation: fillBar 1s linear 0s normal 1 forwards;
-}
-
-@keyframes fillBar {
-  0% {
-    width: 0;
-  }
-  30% {
-    width: 80px;
-  }
-  70% {
-    width: 120px;
-  }
-  100% {
+.progress {
+  .border {
     width: 200px;
+    height: 40px;
+    stroke-width: 2px;
+    stroke: $primary;
+    fill: transparent;
+  }
+  
+  .filling {
+    width: 200px;
+    height: 40px;
+    fill: $primary;
+    animation: fillBar 1s linear 0s normal 1 forwards;
+  }
+  
+  @keyframes fillBar {
+    0% {
+      width: 0;
+    }
+    30% {
+      width: 80px;
+    }
+    70% {
+      width: 120px;
+    }
+    100% {
+      width: 200px;
+    }
   }
 }
+
+

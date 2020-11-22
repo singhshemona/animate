@@ -27,11 +27,7 @@ export default function App() {
       /> */}
       {/* <Pagination numberOfItems={5} /> */}
       {/* <CardEnlarge text={'some text to test'} /> */}
-
-      {/* ========== the following still need comments and stories ========== */}
-
-      {/* stories can be layers of menu, ex. one layer dropdown menu, two layer dropdown menu */}
-      <Menu levels={3} />
+      {/* <Menu levels={3} /> */}
     </>
   );
 }

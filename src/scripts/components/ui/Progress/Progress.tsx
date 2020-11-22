@@ -26,7 +26,7 @@ export const Progress = ({ outcome, endingMsg }: Props) => {
   }, []);
 
   return (
-    <div className={outcome}>
+    <div className={'progress ' + 'progress-' + outcome}>
       {loading ? (
         <p className="ending-msg">{endingMsg}</p>
       ) : (

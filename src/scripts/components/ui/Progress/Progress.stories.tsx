@@ -4,7 +4,7 @@ import { Progress } from './Progress';
 
 export default {
   component: Progress,
-  title: 'Progress',
+  title: 'Components/Small/Progress',
 };
 
 export const Success = () => <Progress endingMsg={text('Ending Message', 'Data Loaded!')} outcome="success" />;

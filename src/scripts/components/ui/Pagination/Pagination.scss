@@ -1,40 +1,43 @@
 @import 'styles/variables.scss';
 
-.card,
-.option {
-  border-radius: 8px;
-}
-
-.slides {
-  display: flex;
-  overflow-x: scroll;
-  margin: 0 70px;
-
-  .card {
-    min-width: 350px;
-    margin: 30px;
-    padding: 0 20px;
-    background: $red;
-    color: $secondary;
+.pagination {
+  .card,
+  .option {
+    border-radius: 8px;
   }
-}
-
-.options {
-  display: flex;
-  justify-content: space-evenly;
-
-  button {
-    font-size: 18px;
-    padding: 8px 16px;
-    border-width: 4px;
-    border-style: solid;
-    border-color: $red;
-    color: $red;
-    font-weight: bold;
-
-    &.active {
+  
+  .slides {
+    display: flex;
+    overflow-x: scroll;
+    margin: 0 70px;
+  
+    .card {
+      min-width: 350px;
+      margin: 30px;
+      padding: 0 20px;
       background: $red;
       color: $secondary;
     }
   }
+  
+  .options {
+    display: flex;
+    justify-content: space-evenly;
+  
+    button {
+      font-size: 18px;
+      padding: 8px 16px;
+      border-width: 4px;
+      border-style: solid;
+      border-color: $red;
+      color: $red;
+      font-weight: bold;
+  
+      &.active {
+        background: $red;
+        color: $secondary;
+      }
+    }
+  }
 }
+

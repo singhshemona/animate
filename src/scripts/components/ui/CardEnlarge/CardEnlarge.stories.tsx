@@ -5,7 +5,7 @@ import { CardEnlarge } from './CardEnlarge';
 
 export default {
   component: CardEnlarge,
-  title: 'CardEnlarge',
+  title: 'Components/Large/Card Enlarge',
   decorators: [
     withKnobs({
       escapeHTML: false,

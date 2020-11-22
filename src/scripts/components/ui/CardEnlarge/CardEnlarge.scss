@@ -1,11 +1,6 @@
 @import 'styles/variables.scss';
 
-.card,
-.shrink-button {
-  color: $red;
-}
-
-.card {
+.card-enlarge {
   background: $secondary;
   padding: 30px;
   box-sizing: border-box;
@@ -46,7 +41,7 @@
   }
 }
 
-.closed {
+.card-enlarge-closed {
   // max-width and height must be the same as 
   // in the 'from' rule in enlargeCard keyframe
   max-width: 350px;
@@ -56,7 +51,7 @@
   margin-top: 70px;
 }
 
-.opened {
+.card-enlarge-opened {
   overflow: scroll;
   animation: enlargeCard .4s cubic-bezier(.35,.78,.37,1) forwards;
 
@@ -64,17 +59,20 @@
     font-size: 24px;
     background: transparent;
     border: 0;
-  }
-}
-
-@keyframes enlargeCard {
-  from {
-    max-width: 350px;
-    height: 480px;
+    color: $red;
   }
 
-  to {
-    max-width: 100%;
-    height: 100vh;
+  @keyframes enlargeCard {
+    from {
+      max-width: 350px;
+      height: 480px;
+    }
+  
+    to {
+      max-width: 100%;
+      height: 100vh;
+    }
   }
+  
 }
+

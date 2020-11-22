@@ -22,7 +22,7 @@ export const CardEnlarge = ({ text }: Props) => {
   };
 
   return (
-    <main className={'card ' + (open ? 'opened' : 'closed')}>
+    <main className={'card-enlarge ' + (open ? 'card-enlarge-opened' : 'card-enlarge-closed')}>
       <div className="heading">
         <h2>Let&apos;s Learn More About the Cosmos</h2>
         {open && (
