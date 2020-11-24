@@ -4,7 +4,7 @@ import { Colors } from './Colors';
 
 export default {
   component: Colors,
-  title: 'Documentation/Colors',
+  title: 'Documentation/Colors Used',
 };
 
-export const Default = () => <Colors />;
+export const Palette = () => <Colors />;

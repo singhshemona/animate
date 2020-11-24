@@ -7,4 +7,4 @@ export default {
   title: 'Documentation/Introduction',
 };
 
-export const Default = () => <Introduction />;
+export const Description = () => <Introduction />;
