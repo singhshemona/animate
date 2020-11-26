@@ -18,9 +18,10 @@ export const Progress = ({ outcome, endingMsg }: Props) => {
           console.log(json);
           hasLoaded(true);
         });
-      // put to see loading bar for at least a second
+      // set milliseconds to at least 50ms longer than what the
+      // fillBar animation is running for (see Progress.scss)
       // can update this or remove line #13, #23, and #25 entirely
-    }, 1050);
+    }, 1550);
 
     return () => clearTimeout(timer);
   }, []);
@@ -31,8 +32,8 @@ export const Progress = ({ outcome, endingMsg }: Props) => {
         <p className="ending-msg">{endingMsg}</p>
       ) : (
         <svg role="alert" aria-live="assertive">
-          <rect className="border" rx="20" ry="20" />
-          <rect className="filling" rx="20" ry="20" />
+          <rect x="1" y="1" className="border" rx="15" ry="15" />
+          <rect x="1" y="1" className="filling" rx="15" ry="15" />
         </svg>
       )}
     </div>

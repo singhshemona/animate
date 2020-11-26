@@ -23,9 +23,9 @@ export const Shake = ({ prompt, confirmation, error }: Props) => {
   };
 
   return (
-    <form onAnimationEnd={() => setShake(false)} className={'shake-form ' + (shake && 'shaking')}>
+    <form className="shake-form">
       <p className="prompt">{prompt}</p>
-      <div className="flex">
+      <div onAnimationEnd={() => setShake(false)} className={'flex ' + (shake && 'shaking')}>
         <input
           className="input"
           name="generic textbox"

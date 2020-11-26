@@ -28,6 +28,8 @@ export default function App() {
       {/* <Pagination numberOfItems={5} /> */}
       {/* <CardEnlarge text={'some text to test'} /> */}
       {/* <Menu levels={3} /> */}
+      <p>If you&apos;re only seeing this text, it&apos;s because all the components are commented out.</p>
+      <p>Go to App.tsx to uncomment the component of your choice.</p>
     </>
   );
 }

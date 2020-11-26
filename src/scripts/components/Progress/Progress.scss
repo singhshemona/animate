@@ -16,7 +16,7 @@
 .progress {
   .border {
     width: 200px;
-    height: 40px;
+    height: 30px;
     stroke-width: 2px;
     stroke: $primary;
     fill: transparent;
@@ -24,9 +24,9 @@
   
   .filling {
     width: 200px;
-    height: 40px;
+    height: 30px;
     fill: $primary;
-    animation: fillBar 1s linear 0s normal 1 forwards;
+    animation: fillBar 1.5s ease-in-out 0s normal 1 forwards;
   }
   
   @keyframes fillBar {

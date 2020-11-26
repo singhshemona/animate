@@ -48,12 +48,12 @@
   height: 480px;
   border-radius: 6px;
   overflow: hidden;
-  margin-top: 70px;
+  margin-top: 20px;
 }
 
 .card-enlarge-opened {
   overflow: scroll;
-  animation: enlargeCard .4s cubic-bezier(.35,.78,.37,1) forwards;
+  animation: enlargeCard .7s cubic-bezier(.35,.78,.37,1) forwards;
 
   .shrink-button {
     font-size: 24px;
