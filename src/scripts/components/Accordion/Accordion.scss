@@ -9,6 +9,7 @@
     min-width: 100%;
     text-align: left;
     padding: 14px;
+    margin: 0; // for visible white margins on safari
     border: 0;
     font-size: 18px;
     background: $primary;

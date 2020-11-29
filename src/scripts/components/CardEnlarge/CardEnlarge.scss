@@ -5,6 +5,7 @@
   padding: 30px;
   box-sizing: border-box;
   margin: 0 auto;
+  scrollbar-width: none; // for scrollbar appearance on firefox
 
   .heading {
     display: flex;
