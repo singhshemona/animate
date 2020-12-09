@@ -28,7 +28,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token cnxih1sissq"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -64,6 +65,7 @@
     "@storybook/preset-create-react-app": "^3.1.5",
     "@storybook/react": "^6.1.2",
     "babel-loader": "^8.1.0",
+    "chromatic": "^5.4.0",
     "react-is": "^16.13.1",
     "sass": "^1.26.10",
     "sass-loader": "^10.0.1",
